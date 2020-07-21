@@ -29,6 +29,9 @@ export const content = {
         url: '/contact'
       }
     ],
+    mobileMenu: {
+      imageSrc: './icons/ico-mobile-menu.png'
+    },
     homepage: {
       topImage: {
         imageSrc: '/images/top-image.png'
@@ -55,5 +58,8 @@ export const content = {
         url: ''
       }
     }
+  },
+  footer: {
+    name: 'iohgug'
   }
 };

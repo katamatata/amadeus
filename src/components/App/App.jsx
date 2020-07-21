@@ -7,7 +7,8 @@ import Header from '../../components/Header';
 import {content} from '../../content';
 
 export const App = () => {
-  const renderHeader = () => <Header content={content.header} />;
+  console.log('content', content);
+  const renderHeader = () => <Header contentForHeader={content.header} />;
 
   return (
     <Body>

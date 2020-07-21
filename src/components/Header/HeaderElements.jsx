@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import {fonts} from '../../config';
 
 export const HeaderWrapper = styled.header`
-  padding: 28px 32px;
   border-bottom: 1px solid grey;
 `;
 
@@ -12,15 +11,25 @@ export const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 70px;
+  padding: 0 11px;
+  @media screen and (max-width: 768px) {
+    padding: 0 11px 0 11px;
+    min-height: 90px;
+  }
 `;
 
-export const LogoLink = styled(Link)`
+export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
 `;
 
 export const Logo = styled.img`
   margin-right: 10px;
+  display: block;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const LogoTitle = styled.p`
@@ -30,22 +39,29 @@ export const LogoTitle = styled.p`
   font-size: 19px;
   letter-spacing: 0.5px;
   margin-bottom: 6px;
+  display: block;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
-export const Menu = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 40%;
+export const StyledLink = styled(Link)`
+  display: block;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
-export const MenuItem = styled.li`
-  color: #005eb8;
+export const StyledMobileLink = styled(Link)`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 
-export const NavLink = styled(Link)`
-  color: #005eb8;
-  &:hover {
-    color: #3a3a3a;
+export const MobileMenuIcon = styled.img`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
   }
 `;
