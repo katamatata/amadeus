@@ -1,31 +1,21 @@
 import React from 'react';
 
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {StyledLink} from '../../HeaderElements';
 
-import {MenuList, MenuItem, NavLink} from './MenuElements';
+import {MenuList, NavLink} from './MenuElements';
 
-export const Menu = ({contentForMenu}) => {
-  console.log('Menu content', contentForMenu);
-  return (
-    <MenuList>
-      <MenuItem>
-        <NavLink to={contentForMenu[0].url}>{contentForMenu[0].title}</NavLink>
-      </MenuItem>
-      <MenuItem>
-        <NavLink to={contentForMenu[1].url}>{contentForMenu[1].title}</NavLink>
-      </MenuItem>
-      <MenuItem>
-        <NavLink to={contentForMenu[2].url}>{contentForMenu[2].title}</NavLink>
-      </MenuItem>
-      <MenuItem>
-        <NavLink to={contentForMenu[3].url}>{contentForMenu[3].title}</NavLink>
-      </MenuItem>
-      <MenuItem>
-        <NavLink to={contentForMenu[4].url}>
-          <FontAwesomeIcon icon={faEnvelope} />
-        </NavLink>
-      </MenuItem>
-    </MenuList>
-  );
-};
+export const Menu = ({contentForMenu}) => (
+  <MenuList>
+    {contentForMenu.map((item) => (
+      <li key={item.title}>
+        {item.imageSrc ? (
+          <StyledLink to={item.url}>
+            <img src={item.imageSrc} alt="Letter icon" />
+          </StyledLink>
+        ) : (
+          <NavLink to={item.url}>{item.title}</NavLink>
+        )}
+      </li>
+    ))}
+  </MenuList>
+);

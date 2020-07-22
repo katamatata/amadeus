@@ -3,10 +3,6 @@ import {Link} from 'react-router-dom';
 
 import {fonts} from '../../config';
 
-export const HeaderWrapper = styled.header`
-  border-bottom: 1px solid grey;
-`;
-
 export const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -32,7 +28,7 @@ export const Logo = styled.img`
   }
 `;
 
-export const LogoTitle = styled.p`
+export const LogoTitle = styled.h1`
   color: #0090c1;
   font-family: ${fonts.lato};
   font-weight: 300;

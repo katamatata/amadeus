@@ -26,11 +26,14 @@ export const content = {
         url: '/profile'
       },
       {
-        url: '/contact'
+        title: 'Contact Us',
+        url: '/contact',
+        imageSrc: './icons/ico-letter.png'
       }
     ],
     mobileMenu: {
-      imageSrc: './icons/ico-mobile-menu.png'
+      imageSrc: './icons/ico-mobile-menu.png',
+      iconSrc: './icons/ico-close.png'
     },
     homepage: {
       topImage: {

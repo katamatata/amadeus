@@ -11,10 +11,6 @@ export const MenuList = styled.ul`
   }
 `;
 
-export const MenuItem = styled.li`
-  color: #005eb8;
-`;
-
 export const NavLink = styled(Link)`
   color: #005eb8;
   &:hover {
