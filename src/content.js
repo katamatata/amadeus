@@ -1,11 +1,13 @@
 export const content = {
   header: {
     logo: {
+      altText: 'Amadeus logo',
       imageSrc: './logo.png',
       url: '/',
-      title: 'First'
+      textLogo: 'First'
     },
     mobileLogo: {
+      altText: 'Amadeus mobile logo',
       imageSrc: './mobile-logo.png',
       url: '/'
     },
@@ -28,20 +30,24 @@ export const content = {
       {
         title: 'Contact Us',
         url: '/contact',
-        imageSrc: './icons/ico-letter.png'
+        imageSrc: './icons/ico-letter.png',
+        altText: 'Letter icon'
       }
     ],
     mobileMenu: {
+      altText: 'Mobile menu icon',
       imageSrc: './icons/ico-mobile-menu.png',
       iconSrc: './icons/ico-close.png'
     }
   },
   homepage: {
     topImage: {
-      imageSrc: '/images/top-image.png'
+      imageSrc: 'images/top-image.png',
+      mobileImageSrc: 'images/mobile-top-image.png'
     },
     title: 'Welcome to Amadeus First',
     subtitle: 'The TOP travel agents’ club in Ukraine',
+    mobileSubtile: 'The TOP travel agents’ club',
     descriptionLeft: {
       paragraph1: '<strong>Amadeus First</strong> is a prestigious and professional community for the welfare of the travel agents.',
       paragraph2: '<strong>Amadeus First</strong> has been created with a view for recognizing the efforts of our Travel Agents community and to reinforce our partnership.',
@@ -52,32 +58,41 @@ export const content = {
     },
     descriptionRight: {
       paragraph1: 'On every reservation with Amadeus Selling Platform (Classic or Connect), you accumulate points for each AIR / Hotel / Car segment.',
-      paragraph2: 'These points can be redeemed into gifts and rewards. All you have to do is just to choose out of a large variety:',
-      paragraph3: ['More reservations', 'More points', 'More rewards']
+      paragraph2: 'These points can be redeemed into gifts and rewards. All you have to do is just to choose out of a large variety:'
     },
     iconBlock1: [{
-        imageSrc: './icons/ico-plane.png'
+        imageSrc: './icons/ico-plane.png',
+        altText: 'Plane icon'
       },
       {
-        imageSrc: './icons/ico-hotel.png'
+        imageSrc: './icons/ico-hotel.png',
+        altText: 'Hotel icon'
       },
       {
-        imageSrc: './icons/ico-car.png'
+        imageSrc: './icons/ico-car.png',
+        altText: 'Car icon'
       },
       {
-        imageSrc: './icons/ico-shield.png'
+        imageSrc: './icons/ico-shield.png',
+        altText: 'Shield icon'
       }
     ],
+    textForIconBlock1: '= Points',
     iconBlock2: [{
-        imageSrc: './icons/ico-man.png'
+        imageSrc: './icons/ico-man.png',
+        altText: 'A man in front of a laptop icon'
       },
       {
-        imageSrc: './icons/ico-hand.png'
+        imageSrc: './icons/ico-hand.png',
+        altText: 'Hand with coins icon'
       },
       {
-        imageSrc: './icons/ico-gift.png'
+        imageSrc: './icons/ico-gift.png',
+        altText: 'Gift icon'
       }
     ],
+    desktopTextForIconBlock3: ['More reservations', 'More points', 'More rewards'],
+    mobileTextForIconBlock3: ['Reservations', 'Points', 'Rewards'],
     buttons: {
       registerButton: {
         title: 'Register as a new user'

@@ -8,7 +8,7 @@ import {
   NavBar,
   LogoWrapper,
   Logo,
-  LogoTitle,
+  LogoText,
   StyledLink,
   StyledMobileLink,
   MobileMenuIcon,
@@ -20,15 +20,18 @@ export const Header = ({contentForHeader}) => (
       <NavBar>
         <StyledLink to={contentForHeader.logo.url}>
           <LogoWrapper>
-            <Logo src={contentForHeader.logo.imageSrc} alt="Amadeus logo" />
-            <LogoTitle>{contentForHeader.logo.title}</LogoTitle>
+            <Logo
+              src={contentForHeader.logo.imageSrc}
+              alt={contentForHeader.logo.altText}
+            />
+            <LogoText>{contentForHeader.logo.textLogo}</LogoText>
           </LogoWrapper>
         </StyledLink>
 
         <StyledMobileLink to={contentForHeader.mobileLogo.url}>
           <img
             src={contentForHeader.mobileLogo.imageSrc}
-            alt="Amadeus mobile logo"
+            alt={contentForHeader.mobileLogo.altText}
           />
         </StyledMobileLink>
 
@@ -36,7 +39,7 @@ export const Header = ({contentForHeader}) => (
 
         <MobileMenuIcon
           src={contentForHeader.mobileMenu.imageSrc}
-          alt="Mobile menu icon"
+          alt={contentForHeader.mobileMenu.altText}
         />
 
         <MobileMenu

@@ -28,12 +28,12 @@ export const Logo = styled.img`
   }
 `;
 
-export const LogoTitle = styled.h1`
+export const LogoText = styled.h1`
   color: #0090c1;
   font-family: ${fonts.lato};
   font-weight: 300;
   font-size: 19px;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
   margin-bottom: 6px;
   display: block;
   @media screen and (max-width: 768px) {

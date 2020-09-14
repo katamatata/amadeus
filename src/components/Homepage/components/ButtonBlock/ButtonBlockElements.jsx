@@ -5,6 +5,9 @@ export const ButtonsWrapper = styled.section`
   justify-content: center;
   padding: 20px 0;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Button = styled.button`
@@ -19,8 +22,14 @@ export const Button = styled.button`
     background-color: #005eb8;
     color: white;
   }
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
 `;
 
 export const Text = styled.p`
   margin: 0 30px;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;

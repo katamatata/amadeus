@@ -2,7 +2,16 @@ import React from 'react';
 
 import {NavLink} from '../Header/components/Menu/MenuElements';
 
-import {ContentWrapper, TopImage, H1, H2} from '../../common';
+import {ContentWrapper, TopImage} from '../../common';
+import {Title} from '../../common/Title';
+import {Subtitle} from '../../common/Subtitle';
+import {
+  IconBlock1,
+  IconBlock2,
+  DesktopIconBlock3,
+  MobileIconBlock3,
+} from './components/IconBlock';
+import ButtonBlock from './components/ButtonBlock';
 
 import {
   TitlesWrapper,
@@ -13,15 +22,18 @@ import {
   ParagraphRight,
 } from './HomepageElements';
 
-import {IconBlock1, IconBlock2, TextIconBlock} from './components/IconBlock';
-import ButtonBlock from './components/ButtonBlock';
-
 export const Homepage = ({contentForHomepage}) => (
   <ContentWrapper>
-    <TopImage src={contentForHomepage.topImage.imageSrc} />
+    <TopImage
+      image={contentForHomepage.topImage.imageSrc}
+      mobileImage={contentForHomepage.topImage.mobileImageSrc}
+    />
     <TitlesWrapper>
-      <H1>{contentForHomepage.title}</H1>
-      <H2>{contentForHomepage.subtitle}</H2>
+      <Title>{contentForHomepage.title}</Title>
+      <Subtitle
+        desktopSubtitle={contentForHomepage.subtitle}
+        mobileSubtitle={contentForHomepage.mobileSubtile}
+      />
     </TitlesWrapper>
     <DescriptionWrapper>
       <DescriptionLeft>
@@ -45,15 +57,19 @@ export const Homepage = ({contentForHomepage}) => (
         <ParagraphRight>
           {contentForHomepage.descriptionRight.paragraph1}
         </ParagraphRight>
-        <IconBlock1 contentForIconBlock={contentForHomepage.iconBlock1} />
+        <IconBlock1
+          contentForIconBlock={contentForHomepage.iconBlock1}
+          text={contentForHomepage.textForIconBlock1}
+        />
         <ParagraphRight>
           {contentForHomepage.descriptionRight.paragraph2}
         </ParagraphRight>
         <IconBlock2 contentForIconBlock={contentForHomepage.iconBlock2} />
-        <TextIconBlock
-          contentForTextIconBlock={
-            contentForHomepage.descriptionRight.paragraph3
-          }
+        <DesktopIconBlock3
+          desktopContent={contentForHomepage.desktopTextForIconBlock3}
+        />
+        <MobileIconBlock3
+          mobileContent={contentForHomepage.mobileTextForIconBlock3}
         />
       </DescriptionRight>
     </DescriptionWrapper>

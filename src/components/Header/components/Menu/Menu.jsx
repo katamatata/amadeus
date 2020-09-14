@@ -10,7 +10,7 @@ export const Menu = ({contentForMenu}) => (
       <li key={item.title}>
         {item.imageSrc ? (
           <StyledLink to={item.url}>
-            <img src={item.imageSrc} alt="Letter icon" />
+            <img src={item.imageSrc} alt={item.altText} />
           </StyledLink>
         ) : (
           <NavLink to={item.url}>{item.title}</NavLink>
