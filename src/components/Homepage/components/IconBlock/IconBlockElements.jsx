@@ -20,18 +20,14 @@ export const TextForIconBlock1 = styled.p`
   padding-bottom: 10px;
 `;
 
-export const DesktopTextForIconBlock3 = styled.p`
-  font-size: 14px;
-  font-weight: 300;
+export const DesktopOnlyBlock = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-export const MobileTextForIconBlock3 = styled.p`
+export const MobileOnlyBlock = styled.div`
   display: none;
-  font-size: 14px;
-  font-weight: 300;
   @media only screen and (max-width: 768px) {
     display: block;
   }
@@ -39,6 +35,8 @@ export const MobileTextForIconBlock3 = styled.p`
 
 export const ListWithArrows = styled(List)`
   li {
+    font-size: 14px;
+    font-weight: 300;
     position: relative;
   }
   li:after {

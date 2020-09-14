@@ -5,12 +5,7 @@ import {NavLink} from '../Header/components/Menu/MenuElements';
 import {ContentWrapper, TopImage} from '../../common';
 import {Title} from '../../common/Title';
 import {Subtitle} from '../../common/Subtitle';
-import {
-  IconBlock1,
-  IconBlock2,
-  DesktopIconBlock3,
-  MobileIconBlock3,
-} from './components/IconBlock';
+import {IconBlock1, IconBlock2, IconBlock3} from './components/IconBlock';
 import ButtonBlock from './components/ButtonBlock';
 
 import {
@@ -65,10 +60,8 @@ export const Homepage = ({contentForHomepage}) => (
           {contentForHomepage.descriptionRight.paragraph2}
         </ParagraphRight>
         <IconBlock2 contentForIconBlock={contentForHomepage.iconBlock2} />
-        <DesktopIconBlock3
+        <IconBlock3
           desktopContent={contentForHomepage.desktopTextForIconBlock3}
-        />
-        <MobileIconBlock3
           mobileContent={contentForHomepage.mobileTextForIconBlock3}
         />
       </DescriptionRight>

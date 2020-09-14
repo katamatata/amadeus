@@ -3,8 +3,8 @@ import React from 'react';
 import {
   List,
   TextForIconBlock1,
-  DesktopTextForIconBlock3,
-  MobileTextForIconBlock3,
+  DesktopOnlyBlock,
+  MobileOnlyBlock,
   ListWithArrows,
 } from './IconBlockElements';
 
@@ -29,22 +29,21 @@ export const IconBlock2 = ({contentForIconBlock}) => (
   </List>
 );
 
-export const DesktopIconBlock3 = ({desktopContent}) => (
-  <ListWithArrows>
-    {desktopContent.map((item, index) => (
-      <li key={index}>
-        <DesktopTextForIconBlock3>{item}</DesktopTextForIconBlock3>
-      </li>
-    ))}
-  </ListWithArrows>
-);
-
-export const MobileIconBlock3 = ({mobileContent}) => (
-  <ListWithArrows>
-    {mobileContent.map((item, index) => (
-      <li key={index}>
-        <MobileTextForIconBlock3>{item}</MobileTextForIconBlock3>
-      </li>
-    ))}
-  </ListWithArrows>
+export const IconBlock3 = ({desktopContent, mobileContent}) => (
+  <>
+    <DesktopOnlyBlock>
+      <ListWithArrows>
+        {desktopContent.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ListWithArrows>
+    </DesktopOnlyBlock>
+    <MobileOnlyBlock>
+      <ListWithArrows>
+        {mobileContent.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ListWithArrows>
+    </MobileOnlyBlock>
+  </>
 );
