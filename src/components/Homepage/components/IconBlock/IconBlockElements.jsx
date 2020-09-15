@@ -7,6 +7,16 @@ export const List = styled.ul`
   justify-content: space-around;
   align-items: center;
   @media only screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
+`;
+
+export const CustomList = styled(List)`
+  li {
+    margin-left: 8px;
+  }
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
     flex-wrap: wrap;
   }
 `;
@@ -18,6 +28,10 @@ export const TextForIconBlock1 = styled.p`
   letter-spacing: -0.5px;
   padding-top: 10px;
   padding-bottom: 10px;
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+    margin-bottom: 15px;
+  }
 `;
 
 export const DesktopOnlyBlock = styled.div`
@@ -51,5 +65,9 @@ export const ListWithArrows = styled(List)`
   }
   li:first-child:after {
     display: none;
+  }
+  @media only screen and (max-width: 768px) {
+    li:after {
+    left: -29px;
   }
 `;

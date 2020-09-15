@@ -24,7 +24,11 @@ export const Homepage = ({contentForHomepage}) => (
       mobileImage={contentForHomepage.topImage.mobileImageSrc}
     />
     <TitlesWrapper>
-      <Title>{contentForHomepage.title}</Title>
+      <Title
+        dangerouslySetInnerHTML={{
+          __html: contentForHomepage.title,
+        }}
+      />
       <Subtitle
         desktopSubtitle={contentForHomepage.subtitle}
         mobileSubtitle={contentForHomepage.mobileSubtile}

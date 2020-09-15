@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ButtonsWrapper = styled.section`
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  margin-bottom: 20px;
   align-items: center;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
@@ -18,6 +18,7 @@ export const Button = styled.button`
   border-radius: 25px;
   color: #005eb8;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
   &:hover {
     background-color: #005eb8;
     color: white;

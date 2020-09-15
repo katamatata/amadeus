@@ -2,6 +2,7 @@ import React from 'react';
 
 import {
   List,
+  CustomList,
   TextForIconBlock1,
   DesktopOnlyBlock,
   MobileOnlyBlock,
@@ -9,14 +10,14 @@ import {
 } from './IconBlockElements';
 
 export const IconBlock1 = ({contentForIconBlock, text}) => (
-  <List>
+  <CustomList>
     {contentForIconBlock.map((item, index) => (
       <li key={index}>
         <img src={item.imageSrc} alt={item.altText} />
       </li>
     ))}
     <TextForIconBlock1>{text}</TextForIconBlock1>
-  </List>
+  </CustomList>
 );
 
 export const IconBlock2 = ({contentForIconBlock}) => (

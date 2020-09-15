@@ -45,7 +45,7 @@ export const content = {
       imageSrc: 'images/top-image.png',
       mobileImageSrc: 'images/mobile-top-image.png'
     },
-    title: 'Welcome to Amadeus First',
+    title: '<span>Welcome</span> to Amadeus First',
     subtitle: 'The TOP travel agents’ club in Ukraine',
     mobileSubtile: 'The TOP travel agents’ club',
     descriptionLeft: {

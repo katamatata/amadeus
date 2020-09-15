@@ -7,8 +7,7 @@ export const DesktopSubtitle = styled.h2`
   font-weight: 300;
   font-size: 28px;
   letter-spacing: -0.5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 10px 0;
   @media only screen and (max-width: 768px) {
     display: none;
   }
@@ -20,8 +19,7 @@ export const MobileSubtitle = styled.h2`
   font-weight: 300;
   font-size: 18px;
   letter-spacing: -0.5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 10px 0;
   @media only screen and (max-width: 768px) {
     display: block;
   }
