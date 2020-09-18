@@ -8,7 +8,10 @@ export const DesktopSubtitle = styled.h2`
   font-size: 28px;
   letter-spacing: -0.5px;
   margin: 10px 0;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    display: block;
+  }
+  @media only screen and (max-width: 767px) {
     display: none;
   }
 `;
@@ -20,7 +23,10 @@ export const MobileSubtitle = styled.h2`
   font-size: 18px;
   letter-spacing: -0.5px;
   margin: 10px 0;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    display: none;
+  }
+  @media only screen and (max-width: 767px) {
     display: block;
   }
 `;
