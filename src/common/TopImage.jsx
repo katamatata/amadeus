@@ -9,13 +9,14 @@ export const TopImage = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    height: 200px;
-    background-image: url('/${(props) => {
-      return props.image;
-    }}');
+  @media only screen and (max-width: 812px) and (orientation: landscape) {
+    height: 150px;
+    background-position: 68%;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 823px) {
+    height: 150px;
+  }
+  @media only screen and (max-width: 560px) and (orientation: portrait) {
     height: 150px;
     background-image: url('/${(props) => {
       return props.mobileImage;

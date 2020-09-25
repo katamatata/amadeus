@@ -155,3 +155,7 @@ a:active,
 a:hover {
 	outline: 0;
 }
+
+* {
+	box-sizing: border-box;
+}

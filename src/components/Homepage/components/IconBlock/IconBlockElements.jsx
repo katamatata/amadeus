@@ -6,12 +6,6 @@ export const List = styled.ul`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    justify-content: space-between;
-  }
-  @media only screen and (max-width: 767px) {
-    justify-content: space-around;
-  }
   @media only screen and (max-width: 320px) {
     justify-content: space-between;
   }
@@ -21,14 +15,29 @@ export const CustomList = styled(List)`
   li {
     margin-left: 8px;
   }
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  @media only screen and (max-width: 1076px) {
     justify-content: center;
     flex-wrap: wrap;
   }
-  @media only screen and (max-width: 767px) {
-    justify-content: center;
-    flex-wrap: wrap;
+  @media only screen and (max-width: 844px) {
+    li {
+      margin-left: 0;
+    }
   }
+  @media only screen and (max-width: 668px) {
+    li {
+      margin-left: 14px;
+    }
+  }
+  @media only screen and (max-width: 414px) {
+    li {
+      margin-left: 8px;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    li {
+      margin-left: 0;
+    }
   }
 `;
 
@@ -37,37 +46,26 @@ export const TextForIconBlock1 = styled.p`
   font-weight: 300;
   font-size: 28px;
   letter-spacing: -0.5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    padding: 0;
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 10px;
   }
-  @media only screen and (max-width: 767px) {
-    padding: 0;
-    margin-bottom: 15px;
-  }
-  @media only screen and (max-width: 414px) {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  @media only screen and (max-width: 668px) {
     margin: 0;
+  }
+  @media only screen and (max-width: 504px) {
+    margin-bottom: 10px;
   }
 `;
 
 export const DesktopOnlyBlock = styled.div`
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    display: none;
-  }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1085px) {
     display: none;
   }
 `;
 
 export const MobileOnlyBlock = styled.div`
   display: none;
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    display: block;
-  }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1085px) {
     display: block;
   }
 `;
@@ -86,13 +84,37 @@ export const ListWithArrows = styled(List)`
     background-image: url(/icons/ico-arrow.png);
     position: absolute;
     top: 3px;
-    left: -33px;
+    left: -25px;
   }
   li:first-child:after {
     display: none;
   }
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1085px) {
+    li:after {
+      left: -35px;
+  }
+  @media only screen and (max-width: 964px) {
     li:after {
     left: -29px;
+  }
+  @media only screen and (max-width: 900px) {
+    li:after {
+    left: -25px;
+  }
+  @media only screen and (max-width: 736px) {
+    li:after {
+    left: -20px;
+  }
+  @media only screen and (max-width: 667px) {
+    li:after {
+    left: -60px;
+  }
+  @media only screen and (max-width: 414px) {
+    li:after {
+    left: -35px;
+  }
+  @media only screen and (max-width: 320px) {
+    li:after {
+    left: -25px;
   }
 `;
