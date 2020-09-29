@@ -11,7 +11,7 @@ import {content} from '../../content';
 export const App = () => (
   <Body>
     <Router>
-      <Header contentForHeader={content.header} />
+      <Header content={content.header} />
       <Switch>
         <Route path="/faq">
           {/* <Faq /> */}

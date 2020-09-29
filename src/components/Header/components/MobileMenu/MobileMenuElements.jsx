@@ -11,8 +11,9 @@ export const Wrapper = styled.div`
   top: 0px;
   right: 0px;
   bottom: 0px;
+  z-index: 1;
   @media screen and (max-width: 768px) {
-    //display: flex;
+    // display: flex;
     display: none;
   }
 `;
@@ -20,6 +21,7 @@ export const Wrapper = styled.div`
 export const IconWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 16px;
 `;
 
 export const CloseIcon = styled.img`
@@ -29,14 +31,17 @@ export const CloseIcon = styled.img`
 export const MenuList = styled.ul`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   height: 45%;
+  li {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export const NavLink = styled(Link)`
   color: #fff;
   font-size: 18px;
-  padding: 16px 70px;
+  padding: 16px;
   display: block;
   &:hover {
     color: #3a3a3a;

@@ -1,52 +1,26 @@
 import React from 'react';
 
 import {ContentWrapper} from '../../common';
+
+import Logo from './components/Logo';
 import Menu from './components/Menu';
 import MobileMenu from './components/MobileMenu';
 
-import {
-  NavBar,
-  LogoWrapper,
-  Logo,
-  LogoText,
-  StyledLink,
-  StyledMobileLink,
-  MobileMenuIcon,
-} from './HeaderElements';
+import {NavBar, MobileMenuIcon} from './HeaderElements';
 
-export const Header = ({contentForHeader}) => (
-  <header>
-    <ContentWrapper>
-      <NavBar>
-        <StyledLink to={contentForHeader.logo.url}>
-          <LogoWrapper>
-            <Logo
-              src={contentForHeader.logo.imageSrc}
-              alt={contentForHeader.logo.altText}
-            />
-            <LogoText>{contentForHeader.logo.textLogo}</LogoText>
-          </LogoWrapper>
-        </StyledLink>
+export const Header = ({content}) => {
+  const {logo, mobileLogo, navBar, mobileMenu} = content;
 
-        <StyledMobileLink to={contentForHeader.mobileLogo.url}>
-          <img
-            src={contentForHeader.mobileLogo.imageSrc}
-            alt={contentForHeader.mobileLogo.altText}
-          />
-        </StyledMobileLink>
-
-        <Menu contentForMenu={contentForHeader.navBar} />
-
-        <MobileMenuIcon
-          src={contentForHeader.mobileMenu.imageSrc}
-          alt={contentForHeader.mobileMenu.altText}
-        />
-
-        <MobileMenu
-          contentForMenu={contentForHeader.navBar}
-          closeIcon={contentForHeader.mobileMenu}
-        />
-      </NavBar>
-    </ContentWrapper>
-  </header>
-);
+  return (
+    <header>
+      <ContentWrapper>
+        <NavBar>
+          <Logo logo={logo} mobileLogo={mobileLogo} />
+          <Menu content={navBar} />
+          <MobileMenuIcon src={mobileMenu.imageSrc} alt={mobileMenu.altText} />
+          <MobileMenu content={navBar} icon={mobileMenu} />
+        </NavBar>
+      </ContentWrapper>
+    </header>
+  );
+};

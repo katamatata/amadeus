@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const TitlesWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   margin-top: 30px;
 `;

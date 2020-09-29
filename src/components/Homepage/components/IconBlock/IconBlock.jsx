@@ -9,26 +9,27 @@ import {
   ListWithArrows,
 } from './IconBlockElements';
 
-export const IconBlock1 = ({contentForIconBlock, text}) => (
+export const IconBlock1 = ({contentForIconBlock, text = ''}) => (
   <CustomList>
     {contentForIconBlock.map((item, index) => (
       <li key={index}>
         <img src={item.imageSrc} alt={item.altText} />
       </li>
     ))}
-    <TextForIconBlock1>{text}</TextForIconBlock1>
+    <TextForIconBlock1>{`${text}`}</TextForIconBlock1>
   </CustomList>
 );
 
-export const IconBlock2 = ({contentForIconBlock}) => (
-  <List>
-    {contentForIconBlock.map((item, index) => (
-      <li key={index}>
-        <img src={item.imageSrc} alt={item.altText} />
-      </li>
-    ))}
-  </List>
-);
+export const IconBlock2 = ({contentForIconBlock = []}) =>
+  contentForIconBlock.length ? (
+    <List>
+      {contentForIconBlock.map((item, index) => (
+        <li key={index}>
+          <img src={item.imageSrc} alt={item.altText} />
+        </li>
+      ))}
+    </List>
+  ) : null;
 
 export const IconBlock3 = ({desktopContent, mobileContent}) => (
   <>

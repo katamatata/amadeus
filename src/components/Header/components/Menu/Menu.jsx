@@ -1,17 +1,17 @@
 import React from 'react';
 
-import {StyledLink} from '../../HeaderElements';
+import {DesktopLink} from '../../components/Logo/LogoElements';
 
 import {MenuList, NavLink} from './MenuElements';
 
-export const Menu = ({contentForMenu}) => (
+export const Menu = ({content}) => (
   <MenuList>
-    {contentForMenu.map((item) => (
-      <li key={item.title}>
+    {content.map((item, index) => (
+      <li key={index}>
         {item.imageSrc ? (
-          <StyledLink to={item.url}>
+          <DesktopLink to={item.url}>
             <img src={item.imageSrc} alt={item.altText} />
-          </StyledLink>
+          </DesktopLink>
         ) : (
           <NavLink to={item.url}>{item.title}</NavLink>
         )}
