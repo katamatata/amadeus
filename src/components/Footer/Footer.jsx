@@ -5,12 +5,12 @@ import FooterMenu from './components/FooterMenu';
 
 import {NavBar, Copyright} from './FooterElements';
 
-export const Footer = ({contentForFooter}) => (
+export const Footer = ({content}) => (
   <footer>
     <ContentWrapper>
       <NavBar>
-        <Copyright>{contentForFooter.copy}</Copyright>
-        <FooterMenu contentForFooterMenu={contentForFooter.menu} />
+        <Copyright>{content.copy}</Copyright>
+        <FooterMenu content={content.menu} />
       </NavBar>
     </ContentWrapper>
   </footer>

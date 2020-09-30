@@ -37,7 +37,7 @@ export const App = () => (
           <Homepage contentForHomepage={content.homepage} />
         </Route>
       </Switch>
-      <Footer contentForFooter={content.footer} />
+      <Footer content={content.footer} />
     </Router>
   </Body>
 );

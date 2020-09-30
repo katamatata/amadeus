@@ -4,10 +4,10 @@ import {NavLink} from '../../../Header/components/Menu/MenuElements';
 
 import {MenuList, ListItem} from './FooterMenuElements';
 
-export const FooterMenu = ({contentForFooterMenu}) => (
+export const FooterMenu = ({content}) => (
   <MenuList>
-    {contentForFooterMenu.map((item) => (
-      <ListItem key={item.title}>
+    {content.map((item, index) => (
+      <ListItem key={index}>
         <NavLink to={item.url}>{item.title}</NavLink>
       </ListItem>
     ))}
