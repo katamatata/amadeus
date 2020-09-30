@@ -2,10 +2,10 @@ import React from 'react';
 
 import {ButtonsWrapper, Button, Text} from './ButtonBlockElements';
 
-export const ButtonBlock = ({contentForButtonBlock}) => (
+export const ButtonBlock = ({content}) => (
   <ButtonsWrapper>
-    <Button>{contentForButtonBlock.registerButton.title}</Button>
-    <Text>or</Text>
-    <Button>{contentForButtonBlock.loginButton.title}</Button>
+    <Button>{content.register}</Button>
+    <Text>{content.text}</Text>
+    <Button>{content.login}</Button>
   </ButtonsWrapper>
 );

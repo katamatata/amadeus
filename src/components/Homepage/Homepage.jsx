@@ -8,26 +8,28 @@ import ButtonBlock from './components/ButtonBlock';
 
 import {TitlesWrapper} from './HomepageElements';
 
-export const Homepage = ({contentForHomepage}) => (
-  <ContentWrapper>
-    <TopImage
-      image={contentForHomepage.topImage.imageSrc}
-      mobileImage={contentForHomepage.topImage.mobileImageSrc}
-    />
-    <TitlesWrapper>
-      <Title
-        dangerouslySetInnerHTML={{
-          __html: contentForHomepage.title,
-        }}
+export const Homepage = ({content}) => {
+  const {
+    topImage,
+    title,
+    subtitle,
+    mobileSubtile,
+    description,
+    buttons,
+  } = content;
+
+  return (
+    <ContentWrapper>
+      <TopImage
+        image={topImage.imageSrc}
+        mobileImage={topImage.mobileImageSrc}
       />
-      <Subtitle
-        desktopSubtitle={contentForHomepage.subtitle}
-        mobileSubtitle={contentForHomepage.mobileSubtile}
-      />
-    </TitlesWrapper>
-    <DescriptionBlock
-      contentForDescriptionBlock={contentForHomepage.description}
-    />
-    <ButtonBlock contentForButtonBlock={contentForHomepage.buttons} />
-  </ContentWrapper>
-);
+      <TitlesWrapper>
+        <Title dangerouslySetInnerHTML={{__html: title}} />
+        <Subtitle desktopSubtitle={subtitle} mobileSubtitle={mobileSubtile} />
+      </TitlesWrapper>
+      <DescriptionBlock content={description} />
+      <ButtonBlock content={buttons} />
+    </ContentWrapper>
+  );
+};

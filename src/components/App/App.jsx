@@ -1,12 +1,12 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-import {Body} from './AppElements';
 import Header from '../Header';
 import Homepage from '../Homepage';
 import Footer from '../Footer';
-
 import {content} from '../../content';
+
+import {Body} from './AppElements';
 
 export const App = () => (
   <Body>
@@ -34,7 +34,7 @@ export const App = () => (
           Contact
         </Route>
         <Route exact path="/">
-          <Homepage contentForHomepage={content.homepage} />
+          <Homepage content={content.homepage} />
         </Route>
       </Switch>
       <Footer content={content.footer} />

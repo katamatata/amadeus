@@ -3,27 +3,30 @@ import React from 'react';
 import {
   List,
   CustomList,
-  TextForIconBlock1,
+  Text,
   DesktopOnlyBlock,
   MobileOnlyBlock,
   ListWithArrows,
 } from './IconBlockElements';
 
-export const IconBlock1 = ({contentForIconBlock, text = ''}) => (
+export const IconBlockTop = ({content}) => (
   <CustomList>
-    {contentForIconBlock.map((item, index) => (
+    {content.map((item, index) => (
       <li key={index}>
-        <img src={item.imageSrc} alt={item.altText} />
+        {item.imageSrc ? (
+          <img src={item.imageSrc} alt={item.altText} />
+        ) : (
+          <Text>{`${item.text}`}</Text>
+        )}
       </li>
     ))}
-    <TextForIconBlock1>{`${text}`}</TextForIconBlock1>
   </CustomList>
 );
 
-export const IconBlock2 = ({contentForIconBlock = []}) =>
-  contentForIconBlock.length ? (
+export const IconBlockMiddle = ({content = []}) =>
+  content.length ? (
     <List>
-      {contentForIconBlock.map((item, index) => (
+      {content.map((item, index) => (
         <li key={index}>
           <img src={item.imageSrc} alt={item.altText} />
         </li>
@@ -31,7 +34,7 @@ export const IconBlock2 = ({contentForIconBlock = []}) =>
     </List>
   ) : null;
 
-export const IconBlock3 = ({desktopContent, mobileContent}) => (
+export const IconBlockBottom = ({desktopContent, mobileContent}) => (
   <>
     <DesktopOnlyBlock>
       <ListWithArrows>

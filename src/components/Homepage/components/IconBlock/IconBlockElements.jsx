@@ -41,7 +41,7 @@ export const CustomList = styled(List)`
   }
 `;
 
-export const TextForIconBlock1 = styled.p`
+export const Text = styled.p`
   font-family: ${fonts.lato};
   font-weight: 300;
   font-size: 28px;

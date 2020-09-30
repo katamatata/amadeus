@@ -61,7 +61,7 @@ export const content = {
         paragraph1: 'On every reservation with Amadeus Selling Platform (Classic or Connect), you accumulate points for each AIR / Hotel / Car segment.',
         paragraph2: 'These points can be redeemed into gifts and rewards. All you have to do is just to choose out of a large variety:'
       },
-      iconBlock1: [{
+      iconBlockTop: [{
           imageSrc: './icons/ico-plane.png',
           altText: 'Plane icon'
         },
@@ -76,10 +76,12 @@ export const content = {
         {
           imageSrc: './icons/ico-shield.png',
           altText: 'Shield icon'
+        },
+        {
+          text: '= Points'
         }
       ],
-      textForIconBlock1: '= Points',
-      iconBlock2: [{
+      iconBlockMiddle: [{
           imageSrc: './icons/ico-man.png',
           altText: 'A man in front of a laptop icon'
         },
@@ -92,17 +94,15 @@ export const content = {
           altText: 'Gift icon'
         }
       ],
-      desktopTextForIconBlock3: ['More reservations', 'More points', 'More rewards'],
-      mobileTextForIconBlock3: ['Reservations', 'Points', 'Rewards'],
-
+      iconBlockBottom: {
+        desktopText: ['More reservations', 'More points', 'More rewards'],
+        mobileText: ['Reservations', 'Points', 'Rewards'],
+      },
     },
     buttons: {
-      registerButton: {
-        title: 'Register as a new user'
-      },
-      loginButton: {
-        title: 'Login'
-      }
+      register: 'Register as a new user',
+      text: 'or',
+      login: 'Login'
     },
   },
   footer: {
