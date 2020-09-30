@@ -8,18 +8,21 @@ import {
   NavLink,
 } from './MobileMenuElements';
 
-export const MobileMenu = ({content, icon}) => (
+export const MobileMenu = ({content = [], icon, onClose}) => (
   <Wrapper>
-    <IconWrapper>
-      <CloseIcon src={icon.iconSrc} />
-    </IconWrapper>
-
-    <MenuList>
-      {content.map((item, index) => (
-        <li key={index}>
-          <NavLink to={item.url}>{item.title}</NavLink>
-        </li>
-      ))}
-    </MenuList>
+    {icon && (
+      <IconWrapper>
+        <CloseIcon src={icon.iconSrc} onClick={onClose} />
+      </IconWrapper>
+    )}
+    {content.length && (
+      <MenuList>
+        {content.map((item, index) => (
+          <li key={index}>
+            <NavLink to={item.url}>{`${item.title}`}</NavLink>
+          </li>
+        ))}
+      </MenuList>
+    )}
   </Wrapper>
 );

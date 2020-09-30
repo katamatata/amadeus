@@ -4,7 +4,7 @@ export const content = {
       altText: 'Amadeus logo',
       imageSrc: './logo.png',
       url: '/',
-      textLogo: 'First'
+      text: 'First'
     },
     mobileLogo: {
       altText: 'Amadeus mobile logo',

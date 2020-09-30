@@ -13,8 +13,7 @@ export const Wrapper = styled.div`
   bottom: 0px;
   z-index: 1;
   @media screen and (max-width: 768px) {
-    // display: flex;
-    display: none;
+    display: flex;
   }
 `;
 

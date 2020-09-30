@@ -22,22 +22,24 @@ export const DescriptionBlock = ({content}) => {
 
   const {paragraph1, paragraph2, paragraph3} = descriptionLeft;
 
+  const {paragraph1: par1, paragraph2: par2} = descriptionRight;
+
   const {desktopText, mobileText} = iconBlockBottom;
 
   return (
     <DescriptionWrapper>
       <DescriptionLeft>
-        <ParagraphLeft dangerouslySetInnerHTML={{__html: paragraph1}} />
-        <ParagraphLeft dangerouslySetInnerHTML={{__html: paragraph2}} />
+        <ParagraphLeft dangerouslySetInnerHTML={{__html: `${paragraph1}`}} />
+        <ParagraphLeft dangerouslySetInnerHTML={{__html: `${paragraph2}`}} />
         <NavLink to={paragraph3.url}>
-          <ParagraphLeft>{paragraph3.text}</ParagraphLeft>
+          <ParagraphLeft>{`${paragraph3.text}`}</ParagraphLeft>
         </NavLink>
       </DescriptionLeft>
 
       <DescriptionRight>
-        <ParagraphRight>{descriptionRight.paragraph1}</ParagraphRight>
+        <ParagraphRight>{`${par1}`}</ParagraphRight>
         <IconBlockTop content={iconBlockTop} />
-        <ParagraphRight>{descriptionRight.paragraph2}</ParagraphRight>
+        <ParagraphRight>{`${par2}`}</ParagraphRight>
         <IconBlockMiddle content={iconBlockMiddle} />
         <IconBlockBottom
           desktopContent={desktopText}

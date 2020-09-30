@@ -9,7 +9,7 @@ export const Footer = ({content}) => (
   <footer>
     <ContentWrapper>
       <NavBar>
-        <Copyright>{content.copy}</Copyright>
+        <Copyright>{`${content.copy}`}</Copyright>
         <FooterMenu content={content.menu} />
       </NavBar>
     </ContentWrapper>
